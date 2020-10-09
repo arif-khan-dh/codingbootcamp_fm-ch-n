@@ -1,0 +1,22 @@
+@function toRem($pxVal) {
+    @return $pxVal / 16px * 1rem;
+}
+
+@function multiply($a, $b) {
+    @return $a * $b;
+}
+
+$breakpoint-up: ("xxlarge": toRem(1160px), "xlarge": toRem(1030px), "large": toRem(926px), "medium": toRem(613px)) ;
+$breakpoint-down: ("xlarge": "1116px", "large": "1030px", "medium": "625px", "small": toRem(612px)) ;
+
+@mixin breakpoint-down ($size) {
+    @media (max-width: map-get($breakpoint-down, $size)){
+        @content;
+    }
+}
+
+@mixin breakpoint-up ($size) {
+    @media (min-width: map-get($breakpoint-up, $size )){
+        @content;
+    }
+}
