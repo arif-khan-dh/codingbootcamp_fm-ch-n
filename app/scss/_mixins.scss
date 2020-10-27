@@ -2,11 +2,16 @@
     @return $pxVal / 16px * 1rem;
 }
 
+@function increaseBy($val, $byPercentage) {
+    @return $val*($byPercentage/100) + $val;
+}
+
 @function multiply($a, $b) {
     @return $a * $b;
 }
 
-$breakpoint-up: ("xxlarge": toRem(1160px), "xlarge": toRem(1030px), "large": toRem(926px), "medium": toRem(613px)) ;
+// $breakpoint-up: ("xxlarge": toRem(1160px), "xlarge": toRem(1030px), "large": toRem(970px), "medium": toRem(613px)) ;
+$breakpoint-up: ("xxlarge": toRem(1220px), "xlarge": toRem(1130px), "large": toRem(1030px), "medium": toRem(970px), "small": toRem(612px));
 $breakpoint-down: ("xlarge": "1116px", "large": "1030px", "medium": "625px", "small": toRem(612px)) ;
 
 @mixin breakpoint-down ($size) {

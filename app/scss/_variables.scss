@@ -13,7 +13,7 @@ $font-sm: 1rem; // 16px
 $font-md: 1.125rem; // 18px
 $font-lg: 1.25rem; // 20px
 $font-xlg: 1.5rem; // 24px
-$font-xxlg: 2rem; // 32px
+$font-xxlg: 1.75rem; // 28px
 $font-xxxlg: 2.5rem; // 40px
 $font-xxxxlg: 3rem; // 48px
 $font-xxxxxlg: 4rem; // 60px
@@ -24,3 +24,13 @@ $font-xxxxxlg: 4rem; // 60px
 // Primary
 $darkBlue: hsl(240, 38%, 20%);
 $grayishBlue: hsl(240, 18%, 77%);
+
+
+$mb-container-width: 376px;
+
+$mb-hero-height: 312px;
+
+// $profile-pic-width: 356px;
+$profile-pic-width: 256px;
+$profile-pic-height: 256px;
+

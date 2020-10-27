@@ -1,0 +1,98 @@
+.hero {
+    background-image: url("../../images/pattern-bg.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: toRem($mb-hero-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint-up(small) {
+        width: 50vw;
+        height: 50vw;
+        max-width: toRem(370px);
+        max-height: toRem(370px);
+    }
+
+    @include breakpoint-up(medium) {
+        order: 2;
+        width: 45vw;
+        height: 45vw;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: toRem(476px);
+        max-height: toRem(476px);
+    }
+
+
+    .frame-wrapper {
+        position: relative;
+        box-shadow: 0 5px 30px 0px rgba(78, 77, 77, 0.3);
+        
+        @include breakpoint-up(medium) {
+        }
+    }
+    
+    .frame {
+        width: toRem($profile-pic-width);
+        height: toRem($profile-pic-height);
+        // overflow: hidden;
+
+        @include breakpoint-up(medium) {
+            width: 23vw;
+            height: 23vw;
+        }
+
+        @include breakpoint-up(large) {
+            max-width: toRem(330px);
+            max-height: toRem(330px);
+        }
+    }
+    
+    .arrows {
+        position: absolute;
+        width: toRem(84px);
+        height: toRem(42px);    
+        left: 50%;
+        top: calc(100% - 21px);
+        border-radius: 25% / 50% ;
+        background-color: white;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 30px 0px rgba(78, 77, 77, 0.3);
+    
+        .arrow {
+            width: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                z-index: -1;
+            }
+        }
+    }
+
+    .profile-picture {
+        display: block;
+        width: toRem($profile-pic-width);
+        height: toRem($profile-pic-height);
+        float: left;
+
+        @include breakpoint-up(medium) {
+            width: 23vw;
+            height: 23vw;
+        }
+
+        @include breakpoint-up(large) {
+            max-width: toRem(330px);
+            max-height: toRem(330px);
+        }
+    }
+}

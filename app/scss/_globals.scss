@@ -16,4 +16,68 @@ body {
 
     font-family: "Inter", sans-serif;
     font-size: $font-sm;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    width: toRem($mb-container-width);
+    
+    background-image: url(../../images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 80%;
+
+    display: flex;
+    flex-direction: column;    
+    padding-bottom: toRem(72px);
+
+    @include breakpoint-up(small) {
+        align-items: center;
+    }
+
+    @include breakpoint-up(medium) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        max-width: toRem(1000px);
+        background-size: 80% 20%;
+        padding-left: 7%;
+        padding-right: 3%;
+        padding-bottom: toRem(60px);
+
+        box-shadow: 0 10px 30px 0px rgba(209, 202, 202, 0.4);
+    }
+}
+
+.frame {
+    position: relative;
+    overflow: hidden;
+}
+   
+.slides {
+    position: absolute;
+    width: 200%;
+    left: 0;
+    // overflow: auto;
+}
+
+
+.slider-slow {
+    transition: left 0.7s ease-in-out;
+}
+
+.slider-medium {
+    transition: left 0.5s ease-in-out;
+}
+
+.slider-fast {
+    transition: left 0.3s ease-in-out;
 }
