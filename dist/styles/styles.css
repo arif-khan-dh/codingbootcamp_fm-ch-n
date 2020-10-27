@@ -195,6 +195,12 @@ img {
           box-shadow: 0 5px 30px 0px rgba(78, 77, 77, 0.3);
 }
 
+@media (min-width: 60.625rem) {
+  .hero .arrows {
+    left: 30%;
+  }
+}
+
 .hero .arrows .arrow {
   width: 50%;
   text-align: center;

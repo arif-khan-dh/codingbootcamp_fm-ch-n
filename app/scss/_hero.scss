@@ -65,6 +65,10 @@
         justify-content: center;
         align-items: center;
         box-shadow: 0 5px 30px 0px rgba(78, 77, 77, 0.3);
+
+        @include breakpoint-up(medium) {
+            left: 30%;
+        }
     
         .arrow {
             width: 50%;
